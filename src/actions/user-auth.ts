@@ -74,6 +74,7 @@ export async function refresh(token: string): Promise<Response> {
 
 // Dummy secret salt for signing tokens
 const secret_signing_salt = "super-secret-salt";
+// Dummy user object
 const user: UserObject = {
   id: 1,
   email: "user@email.com",
