@@ -26,7 +26,7 @@ async function refreshAccessToken(nextAuthJWT: JWT): Promise<JWT> {
     nextAuthJWT.data.validity.valid_until = exp;
     nextAuthJWT.data.tokens.access = accessToken.access;
 
-    return nextAuthJWT;
+    return { ...nextAuthJWT };
   } catch (error) {
     console.debug(error);
     return {
